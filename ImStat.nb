@@ -10,18 +10,21 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[      6965,        216]
-NotebookOptionsPosition[      5968,        176]
-NotebookOutlinePosition[      6301,        191]
-CellTagsIndexPosition[      6258,        188]
+NotebookDataLength[     12428,        388]
+NotebookOptionsPosition[     10470,        317]
+NotebookOutlinePosition[     10802,        332]
+CellTagsIndexPosition[     10759,        329]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 
 Cell[CellGroupData[{
-Cell["Copy of jpg files", "Section",
- CellChangeTimes->{{3.549888160485299*^9, 3.549888174093144*^9}}],
+Cell["Config", "Section",
+ CellChangeTimes->{{3.550245825308876*^9, 3.550245825892906*^9}}],
+
+Cell["Source folder for JPG files", "Text",
+ CellChangeTimes->{{3.550245832237876*^9, 3.550245844989472*^9}}],
 
 Cell[BoxData[
  RowBox[{
@@ -33,6 +36,9 @@ Cell[BoxData[
    ";"}]], "Input",
  CellChangeTimes->{{3.549888177661047*^9, 3.549888290938822*^9}}],
 
+Cell["Number of images found:", "Text",
+ CellChangeTimes->{{3.55024584842925*^9, 3.550245854908599*^9}}],
+
 Cell[CellGroupData[{
 
 Cell[BoxData[
@@ -40,71 +46,12 @@ Cell[BoxData[
  CellChangeTimes->{{3.5498882934807987`*^9, 3.549888298490912*^9}}],
 
 Cell[BoxData["2881"], "Output",
- CellChangeTimes->{3.549888299081493*^9, 3.550241976742208*^9}]
+ CellChangeTimes->{3.549888299081493*^9, 3.550241976742208*^9, 
+  3.5502456322503366`*^9}]
 }, Open  ]],
 
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"imgName", "=", 
-  RowBox[{"jpgFileNames", "[", 
-   RowBox[{"[", "1", "]"}], "]"}]}]], "Input",
- CellChangeTimes->{{3.549888348993031*^9, 3.54988838125906*^9}}],
-
-Cell[BoxData["\<\"/media/superraid/images/images/2007/2007-12-23--21.36.56 \
-chandelier/IMG_5752.JPG\"\>"], "Output",
- CellChangeTimes->{{3.549888355472527*^9, 3.5498883829685698`*^9}, 
-   3.550241978825345*^9}]
-}, Open  ]],
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{"img", "=", 
-   RowBox[{"Import", "[", "imgName", "]"}]}], ";"}]], "Input",
- CellChangeTimes->{{3.549888359609559*^9, 3.549888386394805*^9}, 
-   3.550242353517973*^9}],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"ImageDimensions", "[", "img", "]"}]], "Input",
- CellChangeTimes->{{3.550141321998198*^9, 3.550141328814061*^9}}],
-
-Cell[BoxData[
- RowBox[{"{", 
-  RowBox[{"3456", ",", "2304"}], "}"}]], "Output",
- CellChangeTimes->{3.550141329187245*^9, 3.55024198484916*^9}]
-}, Open  ]],
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{"smallImg", "=", 
-   RowBox[{"ImageResize", "[", 
-    RowBox[{"img", ",", 
-     RowBox[{"{", "300", "}"}]}], "]"}]}], ";"}]], "Input",
- CellChangeTimes->{{3.550141407208075*^9, 3.550141417518262*^9}, {
-   3.550141562362949*^9, 3.5501415661263*^9}, {3.550241827919179*^9, 
-   3.550241832906548*^9}, 3.550242359214348*^9}],
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{"imgInfo", "=", 
-   RowBox[{"Prepend", "[", 
-    RowBox[{
-     RowBox[{"Import", "[", 
-      RowBox[{"imgName", ",", 
-       RowBox[{"{", 
-        RowBox[{"{", 
-         RowBox[{
-         "\"\<Aperture\>\"", ",", "\"\<BitDepth\>\"", ",", 
-          "\"\<CameraTopOrientation\>\"", ",", "\"\<ColorSpace\>\"", ",", 
-          "\"\<Date\>\"", ",", "\"\<Exposure\>\"", ",", "\"\<FocalLength\>\"",
-           ",", "\"\<ImageSize\>\"", ",", "\"\<ISOSpeed\>\"", ",", 
-          "\"\<Manufacturer\>\"", ",", "\"\<Model\>\""}], "}"}], "}"}]}], 
-      "]"}], ",", "smallImg"}], "]"}]}], ";"}]], "Input",
- CellChangeTimes->{{3.549901164930585*^9, 3.5499012628264017`*^9}, {
-   3.549901374852314*^9, 3.5499013976744337`*^9}, {3.5502419984365473`*^9, 
-   3.5502420157804613`*^9}, 3.550242362955392*^9}],
+Cell["Folder for local data storage:", "Text",
+ CellChangeTimes->{{3.550245859541367*^9, 3.550245876277289*^9}}],
 
 Cell[CellGroupData[{
 
@@ -119,7 +66,8 @@ Cell[BoxData[
   3.5502422952743998`*^9, 3.550242302694582*^9}}],
 
 Cell[BoxData["\<\"/home/malte/dev/imStat/dataStorage\"\>"], "Output",
- CellChangeTimes->{3.550242054235429*^9, 3.550242303964595*^9}]
+ CellChangeTimes->{3.550242054235429*^9, 3.550242303964595*^9, 
+  3.5502457555233927`*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -129,12 +77,43 @@ Cell[BoxData[
  CellChangeTimes->{{3.5502423067451077`*^9, 3.55024231304856*^9}}],
 
 Cell[BoxData["\<\"/home/malte/dev/imStat/dataStorage\"\>"], "Output",
- CellChangeTimes->{3.550242313596828*^9}]
+ CellChangeTimes->{3.550242313596828*^9, 3.550245756335885*^9}]
+}, Open  ]]
 }, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Retrieve mini JPG files and basic data\
+\>", "Section",
+ CellChangeTimes->{{3.549888160485299*^9, 3.549888174093144*^9}, {
+  3.55024579096796*^9, 3.55024581442983*^9}}],
+
+Cell["\<\
+Compute data file name from original path:\
+\>", "Text",
+ CellChangeTimes->{{3.550245894804654*^9, 3.5502459055406446`*^9}}],
 
 Cell[BoxData[
  RowBox[{
-  RowBox[{"getData", "[", "path_", "]"}], ":=", 
+  RowBox[{
+   RowBox[{"storageFile", "[", "path_", "]"}], ":=", 
+   RowBox[{
+    RowBox[{"ToString", "[", 
+     RowBox[{"Hash", "[", "path", "]"}], "]"}], "<>", "\"\<.dst\>\""}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.550245111358528*^9, 3.550245122107691*^9}, {
+  3.550245418515723*^9, 3.5502454307167187`*^9}, {3.550245501159943*^9, 
+  3.5502455015326977`*^9}}],
+
+Cell["\<\
+Fetch original image and save data into data file:\
+\>", "Text",
+ CellChangeTimes->{{3.550245910021288*^9, 3.550245924380706*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"createData", "[", "path_", "]"}], ":=", 
   RowBox[{"Module", "[", 
    RowBox[{
     RowBox[{"{", 
@@ -169,13 +148,175 @@ Cell[BoxData[
            "\"\<Date\>\"", ",", "\"\<Exposure\>\"", ",", 
            "\"\<FocalLength\>\"", ",", "\"\<ImageSize\>\"", ",", 
            "\"\<ISOSpeed\>\"", ",", "\"\<Manufacturer\>\"", ",", 
-           "\"\<Model\>\""}], "}"}], "}"}]}], "]"}]}]}]}], 
+           "\"\<Model\>\""}], "}"}], "}"}]}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Put", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+        "smallImg", ",", "dimensions", ",", "aperture", ",", "bitDepth", ",", 
+         "orientation", ",", "colorSpace", ",", "date", ",", "exposure", ",", 
+         "focalLength", ",", "imageSize", ",", "iso", ",", "manufacturer", 
+         ",", "model"}], "}"}], ",", 
+       RowBox[{"storageFile", "[", "path", "]"}]}], "]"}], ";"}]}], 
    "\[IndentingNewLine]", "]"}]}]], "Input",
- CellChangeTimes->{{3.550243671952941*^9, 3.5502438364449253`*^9}}]
+ CellChangeTimes->{{3.550243671952941*^9, 3.55024385290099*^9}, {
+  3.550244981447057*^9, 3.5502450361800756`*^9}, {3.550245099195249*^9, 
+  3.550245129722575*^9}, {3.550245257717059*^9, 3.550245271758568*^9}}],
+
+Cell["\<\
+Fetch data in order of preference {memory, data file, source image}:\
+\>", "Text",
+ CellChangeTimes->{{3.5502459311329517`*^9, 3.5502459700846233`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"getData", "[", "path_", "]"}], "/;", 
+   RowBox[{"FileExistsQ", "[", 
+    RowBox[{"storageFile", "[", "path", "]"}], "]"}]}], ":=", 
+  RowBox[{
+   RowBox[{"getData", "[", "path", "]"}], "=", 
+   RowBox[{"Get", "[", 
+    RowBox[{"storageFile", "[", "path", "]"}], 
+    "]"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"getData", "[", "path_", "]"}], ":=", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"createData", "[", "path", "]"}], ";", 
+    RowBox[{"getData", "[", "path", "]"}]}], ")"}]}]}], "Input",
+ CellChangeTimes->{{3.550245060412002*^9, 3.550245091301409*^9}, {
+  3.550245134492662*^9, 3.550245158277285*^9}, {3.550245334892378*^9, 
+  3.550245392121121*^9}, {3.5502455568374653`*^9, 3.550245559539933*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Test image data retrieval", "Section",
+ CellChangeTimes->{{3.550245988502268*^9, 3.550245998652829*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"iName", "=", 
+  RowBox[{"jpgFileNames", "[", 
+   RowBox[{"[", "7", "]"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.550245457810968*^9, 3.550245490715218*^9}, 
+   3.550245597180773*^9, 3.550245684555492*^9, 3.550245769765712*^9}],
+
+Cell[BoxData["\<\"/media/superraid/images/images/2007/2007-12-26--15.26.07/\
+IMG_5910_autowb.jpg\"\>"], "Output",
+ CellChangeTimes->{{3.550245455559497*^9, 3.55024550593045*^9}, {
+   3.550245569773149*^9, 3.5502455973932753`*^9}, 3.550245638526659*^9, 
+   3.550245685133007*^9, 3.550245770061264*^9, {3.550246025985064*^9, 
+   3.55024604756348*^9}}]
+}, Open  ]],
+
+Cell["First fetch takes long:", "Text",
+ CellChangeTimes->{{3.550246078829135*^9, 3.550246089989563*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"AbsoluteTiming", "[", 
+  RowBox[{
+   RowBox[{"getData", "[", "iName", "]"}], ";"}], "]"}]], "Input",
+ CellChangeTimes->{{3.550245397478837*^9, 3.550245401178404*^9}, {
+  3.5502454703967123`*^9, 3.550245474867803*^9}, {3.550245671669345*^9, 
+  3.550245676681868*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ICCObject", "::", "iccinv"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"-- Message text not found -- \
+(\[NoBreak]\\!\\(\\*TagBox[\\(ICCObject[]\\), False, Rule[Editable, \
+False]]\\)\[NoBreak])\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.5502456919860907`*^9, 3.550245777011971*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"4.11746`7.0661743823059115", ",", "Null"}], "}"}]], "Output",
+ CellChangeTimes->{{3.550245676987631*^9, 3.5502456919884167`*^9}, 
+   3.5502457770143843`*^9}]
+}, Open  ]],
+
+Cell["Fetching from memory:", "Text",
+ CellChangeTimes->{{3.550246095957047*^9, 3.550246099980908*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"AbsoluteTiming", "[", 
+  RowBox[{
+   RowBox[{"getData", "[", "iName", "]"}], ";"}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"0.00004`2.053604984823933", ",", "Null"}], "}"}]], "Output",
+ CellChangeTimes->{3.550245692222348*^9, 3.550245778729011*^9}]
+}, Open  ]],
+
+Cell[BoxData["Quit"], "Input",
+ CellChangeTimes->{{3.550245603976643*^9, 3.55024560445613*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"iName", "=", 
+   RowBox[{"jpgFileNames", "[", 
+    RowBox[{"[", "7", "]"}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.550245457810968*^9, 3.550245490715218*^9}, 
+   3.550245597180773*^9, 3.550245684555492*^9, 3.550245769765712*^9, 
+   3.550246058292466*^9}],
+
+Cell["Fetching from local data file:", "Text",
+ CellChangeTimes->{{3.550246104420312*^9, 3.550246115068654*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"AbsoluteTiming", "[", 
+  RowBox[{
+   RowBox[{"getData", "[", "iName", "]"}], ";"}], "]"}]], "Input",
+ CellChangeTimes->{3.55024603373934*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ICCObject", "::", "iccinv"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"-- Message text not found -- \
+(\[NoBreak]\\!\\(\\*TagBox[\\(ICCObject[]\\), False, Rule[Editable, \
+False]]\\)\[NoBreak])\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.550246049222822*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"0.366232`6.01530128216796", ",", "Null"}], "}"}]], "Output",
+ CellChangeTimes->{{3.550246023301194*^9, 3.550246049264524*^9}}]
+}, Open  ]],
+
+Cell["Fetching from memory:", "Text",
+ CellChangeTimes->{{3.5502461183085823`*^9, 3.5502461239091883`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"AbsoluteTiming", "[", 
+  RowBox[{
+   RowBox[{"getData", "[", "iName", "]"}], ";"}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"0.000041`2.0643288502157104", ",", "Null"}], "}"}]], "Output",
+ CellChangeTimes->{3.550246074292582*^9}]
+}, Open  ]]
 }, Open  ]]
 },
 WindowSize->{740, 720},
-WindowMargins->{{330, Automatic}, {36, Automatic}},
+WindowMargins->{{24, Automatic}, {31, Automatic}},
 FrontEndVersion->"8.1 for Linux x86 (64-bit) (May 25, 2011)",
 StyleDefinitions->"Default.nb"
 ]
@@ -191,32 +332,63 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[579, 22, 102, 1, 74, "Section"],
-Cell[684, 25, 323, 8, 52, "Input"],
+Cell[579, 22, 91, 1, 74, "Section"],
+Cell[673, 25, 109, 1, 30, "Text"],
+Cell[785, 28, 323, 8, 52, "Input"],
+Cell[1111, 38, 104, 1, 30, "Text"],
 Cell[CellGroupData[{
-Cell[1032, 37, 138, 2, 30, "Input"],
-Cell[1173, 41, 95, 1, 30, "Output"]
+Cell[1240, 43, 138, 2, 30, "Input"],
+Cell[1381, 47, 122, 2, 30, "Output"]
+}, Open  ]],
+Cell[1518, 52, 112, 1, 30, "Text"],
+Cell[CellGroupData[{
+Cell[1655, 57, 327, 8, 30, "Input"],
+Cell[1985, 67, 160, 2, 30, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1305, 47, 183, 4, 30, "Input"],
-Cell[1491, 53, 211, 3, 50, "Output"]
-}, Open  ]],
-Cell[1717, 59, 201, 5, 30, "Input"],
-Cell[CellGroupData[{
-Cell[1943, 68, 136, 2, 30, "Input"],
-Cell[2082, 72, 142, 3, 30, "Output"]
-}, Open  ]],
-Cell[2239, 78, 354, 8, 30, "Input"],
-Cell[2596, 88, 823, 18, 126, "Input"],
-Cell[CellGroupData[{
-Cell[3444, 110, 327, 8, 30, "Input"],
-Cell[3774, 120, 133, 1, 30, "Output"]
+Cell[2182, 74, 141, 2, 30, "Input"],
+Cell[2326, 78, 133, 1, 30, "Output"]
+}, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[3944, 126, 141, 2, 30, "Input"],
-Cell[4088, 130, 111, 1, 30, "Output"]
+Cell[2508, 85, 178, 4, 74, "Section"],
+Cell[2689, 91, 134, 3, 30, "Text"],
+Cell[2826, 96, 392, 10, 30, "Input"],
+Cell[3221, 108, 140, 3, 30, "Text"],
+Cell[3364, 113, 2334, 51, 335, "Input"],
+Cell[5701, 166, 162, 3, 30, "Text"],
+Cell[5866, 171, 766, 19, 69, "Input"]
 }, Open  ]],
-Cell[4214, 134, 1738, 39, 278, "Input"]
+Cell[CellGroupData[{
+Cell[6669, 195, 110, 1, 74, "Section"],
+Cell[CellGroupData[{
+Cell[6804, 200, 252, 5, 30, "Input"],
+Cell[7059, 207, 349, 5, 50, "Output"]
+}, Open  ]],
+Cell[7423, 215, 105, 1, 30, "Text"],
+Cell[CellGroupData[{
+Cell[7553, 220, 290, 6, 30, "Input"],
+Cell[7846, 228, 340, 8, 24, "Message"],
+Cell[8189, 238, 197, 4, 30, "Output"]
+}, Open  ]],
+Cell[8401, 245, 103, 1, 30, "Text"],
+Cell[CellGroupData[{
+Cell[8529, 250, 124, 3, 30, "Input"],
+Cell[8656, 255, 164, 3, 30, "Output"]
+}, Open  ]],
+Cell[8835, 261, 95, 1, 30, "Input"],
+Cell[8933, 264, 298, 7, 30, "Input"],
+Cell[9234, 273, 112, 1, 30, "Text"],
+Cell[CellGroupData[{
+Cell[9371, 278, 165, 4, 30, "Input"],
+Cell[9539, 284, 316, 8, 24, "Message"],
+Cell[9858, 294, 166, 3, 30, "Output"]
+}, Open  ]],
+Cell[10039, 300, 107, 1, 30, "Text"],
+Cell[CellGroupData[{
+Cell[10171, 305, 124, 3, 30, "Input"],
+Cell[10298, 310, 144, 3, 30, "Output"]
+}, Open  ]]
 }, Open  ]]
 }
 ]
