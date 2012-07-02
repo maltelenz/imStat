@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     15141,        465]
-NotebookOptionsPosition[     12945,        386]
-NotebookOutlinePosition[     13277,        401]
-CellTagsIndexPosition[     13234,        398]
+NotebookDataLength[     15196,        461]
+NotebookOptionsPosition[     12959,        382]
+NotebookOutlinePosition[     13291,        397]
+CellTagsIndexPosition[     13248,        394]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -334,8 +334,6 @@ Cell[CellGroupData[{
 Cell["Retrieve image data", "Section",
  CellChangeTimes->{{3.550246173701167*^9, 3.550246177357382*^9}}],
 
-Cell[CellGroupData[{
-
 Cell[BoxData[
  RowBox[{"Monitor", "[", "\[IndentingNewLine]", 
   RowBox[{
@@ -368,21 +366,19 @@ Cell[BoxData[
    3.550246445637561*^9, 3.5502464815180483`*^9}, {3.550246609462536*^9, 
    3.550246654199901*^9}, {3.550246822486741*^9, 3.550246831521763*^9}, {
    3.5502468663777018`*^9, 3.550246936618702*^9}, {3.550247003071581*^9, 
-   3.5502470260890827`*^9}}],
+   3.5502470260890827`*^9}}]
+}, Open  ]],
 
-Cell[BoxData[
- DynamicBox[ToBoxes[
-   Refresh[
-    ProgressIndicator[
-     Length[
-      FileNames["*", $CellContext`dataDir]], {0, 
-      Length[$CellContext`jpgFileNames]}], UpdateInterval -> 0.5, 
-    TrackedSymbols -> {}], StandardForm],
-  Evaluator->"Local",
-  ImageSizeCache->{200., {5., 11.}}]], "PrintTemporary",
- CellChangeTimes->{3.550246937988299*^9}]
-}, Open  ]]
-}, Open  ]]
+Cell["Number of images taken", "Section",
+ CellChangeTimes->{{3.55025016682331*^9, 3.550250169886944*^9}}],
+
+Cell["Images taken over time", "Section",
+ CellChangeTimes->{{3.550249954079805*^9, 3.5502499603190413`*^9}, {
+  3.55025015651893*^9, 3.550250157710928*^9}}],
+
+Cell["...", "Section",
+ CellChangeTimes->{{3.5502502156459627`*^9, 3.5502502165112953`*^9}, {
+  3.550251289457039*^9, 3.550251295215329*^9}}]
 },
 WindowSize->{740, 720},
 WindowMargins->{{24, Automatic}, {31, Automatic}},
@@ -462,11 +458,11 @@ Cell[10820, 324, 144, 3, 30, "Output"]
 }, Closed]],
 Cell[CellGroupData[{
 Cell[11013, 333, 104, 1, 44, "Section"],
-Cell[CellGroupData[{
-Cell[11142, 338, 1410, 32, 183, "Input"],
-Cell[12555, 372, 362, 10, 26, "PrintTemporary"]
-}, Open  ]]
-}, Open  ]]
+Cell[11120, 336, 1410, 32, 183, "Input"]
+}, Open  ]],
+Cell[12545, 371, 106, 1, 74, "Section"],
+Cell[12654, 374, 157, 2, 44, "Section"],
+Cell[12814, 378, 141, 2, 44, "Section"]
 }
 ]
 *)
