@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     12428,        388]
-NotebookOptionsPosition[     10470,        317]
-NotebookOutlinePosition[     10802,        332]
-CellTagsIndexPosition[     10759,        329]
+NotebookDataLength[     15141,        465]
+NotebookOptionsPosition[     12945,        386]
+NotebookOutlinePosition[     13277,        401]
+CellTagsIndexPosition[     13234,        398]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -47,7 +47,7 @@ Cell[BoxData[
 
 Cell[BoxData["2881"], "Output",
  CellChangeTimes->{3.549888299081493*^9, 3.550241976742208*^9, 
-  3.5502456322503366`*^9}]
+  3.5502456322503366`*^9, 3.550246387586069*^9}]
 }, Open  ]],
 
 Cell["Folder for local data storage:", "Text",
@@ -66,8 +66,9 @@ Cell[BoxData[
   3.5502422952743998`*^9, 3.550242302694582*^9}}],
 
 Cell[BoxData["\<\"/home/malte/dev/imStat/dataStorage\"\>"], "Output",
- CellChangeTimes->{3.550242054235429*^9, 3.550242303964595*^9, 
-  3.5502457555233927`*^9}]
+ CellChangeTimes->{
+  3.550242054235429*^9, 3.550242303964595*^9, 3.5502457555233927`*^9, {
+   3.550246366589756*^9, 3.550246387689384*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -98,18 +99,31 @@ Cell[BoxData[
  RowBox[{
   RowBox[{
    RowBox[{"storageFile", "[", "path_", "]"}], ":=", 
-   RowBox[{
-    RowBox[{"ToString", "[", 
-     RowBox[{"Hash", "[", "path", "]"}], "]"}], "<>", "\"\<.dst\>\""}]}], 
-  ";"}]], "Input",
+   RowBox[{"FileNameJoin", "[", 
+    RowBox[{"{", 
+     RowBox[{"dataDir", ",", 
+      RowBox[{
+       RowBox[{"ToString", "[", 
+        RowBox[{"Hash", "[", "path", "]"}], "]"}], "<>", "\"\<.dst\>\""}]}], 
+     "}"}], "]"}]}], ";"}]], "Input",
  CellChangeTimes->{{3.550245111358528*^9, 3.550245122107691*^9}, {
   3.550245418515723*^9, 3.5502454307167187`*^9}, {3.550245501159943*^9, 
-  3.5502455015326977`*^9}}],
+  3.5502455015326977`*^9}, {3.550246352212985*^9, 3.5502463713503942`*^9}}],
 
 Cell["\<\
 Fetch original image and save data into data file:\
 \>", "Text",
  CellChangeTimes->{{3.550245910021288*^9, 3.550245924380706*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"createData", "[", "path_", "]"}], "/;", 
+    RowBox[{"FileExistsQ", "[", 
+     RowBox[{"storageFile", "[", "path", "]"}], "]"}]}], "=", "Null"}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.55024625862799*^9, 3.550246267316386*^9}}],
 
 Cell[BoxData[
  RowBox[{
@@ -313,6 +327,61 @@ Cell[BoxData[
   RowBox[{"0.000041`2.0643288502157104", ",", "Null"}], "}"}]], "Output",
  CellChangeTimes->{3.550246074292582*^9}]
 }, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Retrieve image data", "Section",
+ CellChangeTimes->{{3.550246173701167*^9, 3.550246177357382*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Monitor", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"ParallelDo", "[", 
+    RowBox[{
+     RowBox[{"createData", "[", 
+      RowBox[{"jpgFileNames", "[", 
+       RowBox[{"[", "i", "]"}], "]"}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", 
+       RowBox[{"Length", "[", "jpgFileNames", "]"}]}], "}"}]}], "]"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"Refresh", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"ProgressIndicator", "[", 
+      RowBox[{
+       RowBox[{"Length", "@", 
+        RowBox[{"FileNames", "[", 
+         RowBox[{"\"\<*\>\"", ",", "dataDir"}], "]"}]}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", 
+         RowBox[{"Length", "[", "jpgFileNames", "]"}]}], "}"}]}], "]"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"UpdateInterval", "\[Rule]", "0.5"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"TrackedSymbols", "\[Rule]", 
+      RowBox[{"{", "}"}]}]}], "\[IndentingNewLine]", "]"}]}], 
+  "\[IndentingNewLine]", "]"}]], "Input",
+ CellChangeTimes->{{3.550246179973894*^9, 3.550246207113903*^9}, {
+   3.550246291303256*^9, 3.5502462926129417`*^9}, 3.550246333471834*^9, {
+   3.550246445637561*^9, 3.5502464815180483`*^9}, {3.550246609462536*^9, 
+   3.550246654199901*^9}, {3.550246822486741*^9, 3.550246831521763*^9}, {
+   3.5502468663777018`*^9, 3.550246936618702*^9}, {3.550247003071581*^9, 
+   3.5502470260890827`*^9}}],
+
+Cell[BoxData[
+ DynamicBox[ToBoxes[
+   Refresh[
+    ProgressIndicator[
+     Length[
+      FileNames["*", $CellContext`dataDir]], {0, 
+      Length[$CellContext`jpgFileNames]}], UpdateInterval -> 0.5, 
+    TrackedSymbols -> {}], StandardForm],
+  Evaluator->"Local",
+  ImageSizeCache->{200., {5., 11.}}]], "PrintTemporary",
+ CellChangeTimes->{3.550246937988299*^9}]
+}, Open  ]]
 }, Open  ]]
 },
 WindowSize->{740, 720},
@@ -338,56 +407,64 @@ Cell[785, 28, 323, 8, 52, "Input"],
 Cell[1111, 38, 104, 1, 30, "Text"],
 Cell[CellGroupData[{
 Cell[1240, 43, 138, 2, 30, "Input"],
-Cell[1381, 47, 122, 2, 30, "Output"]
+Cell[1381, 47, 144, 2, 30, "Output"]
 }, Open  ]],
-Cell[1518, 52, 112, 1, 30, "Text"],
+Cell[1540, 52, 112, 1, 30, "Text"],
 Cell[CellGroupData[{
-Cell[1655, 57, 327, 8, 30, "Input"],
-Cell[1985, 67, 160, 2, 30, "Output"]
+Cell[1677, 57, 327, 8, 30, "Input"],
+Cell[2007, 67, 210, 3, 30, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2182, 74, 141, 2, 30, "Input"],
-Cell[2326, 78, 133, 1, 30, "Output"]
+Cell[2254, 75, 141, 2, 30, "Input"],
+Cell[2398, 79, 133, 1, 30, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2508, 85, 178, 4, 74, "Section"],
-Cell[2689, 91, 134, 3, 30, "Text"],
-Cell[2826, 96, 392, 10, 30, "Input"],
-Cell[3221, 108, 140, 3, 30, "Text"],
-Cell[3364, 113, 2334, 51, 335, "Input"],
-Cell[5701, 166, 162, 3, 30, "Text"],
-Cell[5866, 171, 766, 19, 69, "Input"]
+Cell[2580, 86, 178, 4, 74, "Section"],
+Cell[2761, 92, 134, 3, 30, "Text"],
+Cell[2898, 97, 549, 13, 30, "Input"],
+Cell[3450, 112, 140, 3, 30, "Text"],
+Cell[3593, 117, 290, 8, 30, "Input"],
+Cell[3886, 127, 2334, 51, 335, "Input"],
+Cell[6223, 180, 162, 3, 30, "Text"],
+Cell[6388, 185, 766, 19, 69, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[6669, 195, 110, 1, 74, "Section"],
+Cell[7191, 209, 110, 1, 74, "Section"],
 Cell[CellGroupData[{
-Cell[6804, 200, 252, 5, 30, "Input"],
-Cell[7059, 207, 349, 5, 50, "Output"]
+Cell[7326, 214, 252, 5, 30, "Input"],
+Cell[7581, 221, 349, 5, 50, "Output"]
 }, Open  ]],
-Cell[7423, 215, 105, 1, 30, "Text"],
+Cell[7945, 229, 105, 1, 30, "Text"],
 Cell[CellGroupData[{
-Cell[7553, 220, 290, 6, 30, "Input"],
-Cell[7846, 228, 340, 8, 24, "Message"],
-Cell[8189, 238, 197, 4, 30, "Output"]
+Cell[8075, 234, 290, 6, 30, "Input"],
+Cell[8368, 242, 340, 8, 24, "Message"],
+Cell[8711, 252, 197, 4, 30, "Output"]
 }, Open  ]],
-Cell[8401, 245, 103, 1, 30, "Text"],
+Cell[8923, 259, 103, 1, 30, "Text"],
 Cell[CellGroupData[{
-Cell[8529, 250, 124, 3, 30, "Input"],
-Cell[8656, 255, 164, 3, 30, "Output"]
+Cell[9051, 264, 124, 3, 30, "Input"],
+Cell[9178, 269, 164, 3, 30, "Output"]
 }, Open  ]],
-Cell[8835, 261, 95, 1, 30, "Input"],
-Cell[8933, 264, 298, 7, 30, "Input"],
-Cell[9234, 273, 112, 1, 30, "Text"],
+Cell[9357, 275, 95, 1, 30, "Input"],
+Cell[9455, 278, 298, 7, 30, "Input"],
+Cell[9756, 287, 112, 1, 30, "Text"],
 Cell[CellGroupData[{
-Cell[9371, 278, 165, 4, 30, "Input"],
-Cell[9539, 284, 316, 8, 24, "Message"],
-Cell[9858, 294, 166, 3, 30, "Output"]
+Cell[9893, 292, 165, 4, 30, "Input"],
+Cell[10061, 298, 316, 8, 24, "Message"],
+Cell[10380, 308, 166, 3, 30, "Output"]
 }, Open  ]],
-Cell[10039, 300, 107, 1, 30, "Text"],
+Cell[10561, 314, 107, 1, 30, "Text"],
 Cell[CellGroupData[{
-Cell[10171, 305, 124, 3, 30, "Input"],
-Cell[10298, 310, 144, 3, 30, "Output"]
+Cell[10693, 319, 124, 3, 30, "Input"],
+Cell[10820, 324, 144, 3, 30, "Output"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[11013, 333, 104, 1, 44, "Section"],
+Cell[CellGroupData[{
+Cell[11142, 338, 1410, 32, 183, "Input"],
+Cell[12555, 372, 362, 10, 26, "PrintTemporary"]
 }, Open  ]]
 }, Open  ]]
 }
