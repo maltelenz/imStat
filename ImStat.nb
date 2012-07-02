@@ -1,0 +1,225 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      6965,        216]
+NotebookOptionsPosition[      5968,        176]
+NotebookOutlinePosition[      6301,        191]
+CellTagsIndexPosition[      6258,        188]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Copy of jpg files", "Section",
+ CellChangeTimes->{{3.549888160485299*^9, 3.549888174093144*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"jpgFileNames", "=", 
+   RowBox[{"FileNames", "[", 
+    RowBox[{
+     RowBox[{"\"\<*.jpg\>\"", "|", "\"\<*.JPG\>\""}], ",", 
+     "\"\</media/superraid/images/images/\>\"", ",", "\[Infinity]"}], "]"}]}],
+   ";"}]], "Input",
+ CellChangeTimes->{{3.549888177661047*^9, 3.549888290938822*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Length", "[", "jpgFileNames", "]"}]], "Input",
+ CellChangeTimes->{{3.5498882934807987`*^9, 3.549888298490912*^9}}],
+
+Cell[BoxData["2881"], "Output",
+ CellChangeTimes->{3.549888299081493*^9, 3.550241976742208*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"imgName", "=", 
+  RowBox[{"jpgFileNames", "[", 
+   RowBox[{"[", "1", "]"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.549888348993031*^9, 3.54988838125906*^9}}],
+
+Cell[BoxData["\<\"/media/superraid/images/images/2007/2007-12-23--21.36.56 \
+chandelier/IMG_5752.JPG\"\>"], "Output",
+ CellChangeTimes->{{3.549888355472527*^9, 3.5498883829685698`*^9}, 
+   3.550241978825345*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"img", "=", 
+   RowBox[{"Import", "[", "imgName", "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.549888359609559*^9, 3.549888386394805*^9}, 
+   3.550242353517973*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ImageDimensions", "[", "img", "]"}]], "Input",
+ CellChangeTimes->{{3.550141321998198*^9, 3.550141328814061*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"3456", ",", "2304"}], "}"}]], "Output",
+ CellChangeTimes->{3.550141329187245*^9, 3.55024198484916*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"smallImg", "=", 
+   RowBox[{"ImageResize", "[", 
+    RowBox[{"img", ",", 
+     RowBox[{"{", "300", "}"}]}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.550141407208075*^9, 3.550141417518262*^9}, {
+   3.550141562362949*^9, 3.5501415661263*^9}, {3.550241827919179*^9, 
+   3.550241832906548*^9}, 3.550242359214348*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"imgInfo", "=", 
+   RowBox[{"Prepend", "[", 
+    RowBox[{
+     RowBox[{"Import", "[", 
+      RowBox[{"imgName", ",", 
+       RowBox[{"{", 
+        RowBox[{"{", 
+         RowBox[{
+         "\"\<Aperture\>\"", ",", "\"\<BitDepth\>\"", ",", 
+          "\"\<CameraTopOrientation\>\"", ",", "\"\<ColorSpace\>\"", ",", 
+          "\"\<Date\>\"", ",", "\"\<Exposure\>\"", ",", "\"\<FocalLength\>\"",
+           ",", "\"\<ImageSize\>\"", ",", "\"\<ISOSpeed\>\"", ",", 
+          "\"\<Manufacturer\>\"", ",", "\"\<Model\>\""}], "}"}], "}"}]}], 
+      "]"}], ",", "smallImg"}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.549901164930585*^9, 3.5499012628264017`*^9}, {
+   3.549901374852314*^9, 3.5499013976744337`*^9}, {3.5502419984365473`*^9, 
+   3.5502420157804613`*^9}, 3.550242362955392*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"dataDir", "=", 
+  RowBox[{"FileNameJoin", "[", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"NotebookDirectory", "[", "]"}], ",", "\"\<dataStorage\>\""}], 
+    "}"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.5502420467395773`*^9, 3.550242067313099*^9}, {
+  3.5502422952743998`*^9, 3.550242302694582*^9}}],
+
+Cell[BoxData["\<\"/home/malte/dev/imStat/dataStorage\"\>"], "Output",
+ CellChangeTimes->{3.550242054235429*^9, 3.550242303964595*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CreateDirectory", "[", "dataDir", "]"}]], "Input",
+ CellChangeTimes->{{3.5502423067451077`*^9, 3.55024231304856*^9}}],
+
+Cell[BoxData["\<\"/home/malte/dev/imStat/dataStorage\"\>"], "Output",
+ CellChangeTimes->{3.550242313596828*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"getData", "[", "path_", "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+     "img", ",", "dimensions", ",", "smallImg", ",", "aperture", ",", 
+      "bitDepth", ",", "orientation", ",", "colorSpace", ",", "date", ",", 
+      "exposure", ",", "focalLength", ",", "imageSize", ",", "iso", ",", 
+      "manufacturer", ",", "model"}], "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"img", "=", 
+      RowBox[{"Import", "[", "path", "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"dimensions", "=", 
+      RowBox[{"ImageDimensions", "[", "img", "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"smallImg", "=", 
+      RowBox[{"ImageResize", "[", 
+       RowBox[{"img", ",", 
+        RowBox[{"{", "300", "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+       "aperture", ",", "bitDepth", ",", "orientation", ",", "colorSpace", 
+        ",", "date", ",", "exposure", ",", "focalLength", ",", "imageSize", 
+        ",", "iso", ",", "manufacturer", ",", "model"}], "}"}], "=", 
+      RowBox[{"Import", "[", 
+       RowBox[{"path", ",", 
+        RowBox[{"{", 
+         RowBox[{"{", 
+          RowBox[{
+          "\"\<Aperture\>\"", ",", "\"\<BitDepth\>\"", ",", 
+           "\"\<CameraTopOrientation\>\"", ",", "\"\<ColorSpace\>\"", ",", 
+           "\"\<Date\>\"", ",", "\"\<Exposure\>\"", ",", 
+           "\"\<FocalLength\>\"", ",", "\"\<ImageSize\>\"", ",", 
+           "\"\<ISOSpeed\>\"", ",", "\"\<Manufacturer\>\"", ",", 
+           "\"\<Model\>\""}], "}"}], "}"}]}], "]"}]}]}]}], 
+   "\[IndentingNewLine]", "]"}]}]], "Input",
+ CellChangeTimes->{{3.550243671952941*^9, 3.5502438364449253`*^9}}]
+}, Open  ]]
+},
+WindowSize->{740, 720},
+WindowMargins->{{330, Automatic}, {36, Automatic}},
+FrontEndVersion->"8.1 for Linux x86 (64-bit) (May 25, 2011)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 102, 1, 74, "Section"],
+Cell[684, 25, 323, 8, 52, "Input"],
+Cell[CellGroupData[{
+Cell[1032, 37, 138, 2, 30, "Input"],
+Cell[1173, 41, 95, 1, 30, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1305, 47, 183, 4, 30, "Input"],
+Cell[1491, 53, 211, 3, 50, "Output"]
+}, Open  ]],
+Cell[1717, 59, 201, 5, 30, "Input"],
+Cell[CellGroupData[{
+Cell[1943, 68, 136, 2, 30, "Input"],
+Cell[2082, 72, 142, 3, 30, "Output"]
+}, Open  ]],
+Cell[2239, 78, 354, 8, 30, "Input"],
+Cell[2596, 88, 823, 18, 126, "Input"],
+Cell[CellGroupData[{
+Cell[3444, 110, 327, 8, 30, "Input"],
+Cell[3774, 120, 133, 1, 30, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3944, 126, 141, 2, 30, "Input"],
+Cell[4088, 130, 111, 1, 30, "Output"]
+}, Open  ]],
+Cell[4214, 134, 1738, 39, 278, "Input"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
