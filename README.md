@@ -1,0 +1,1 @@
+Small project with the goal of getting statistics on an image collection.
