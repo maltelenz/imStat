@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[    101737,       2769]
-NotebookOptionsPosition[     96245,       2589]
-NotebookOutlinePosition[     96649,       2605]
-CellTagsIndexPosition[     96606,       2602]
+NotebookDataLength[    110553,       2996]
+NotebookOptionsPosition[    104721,       2804]
+NotebookOutlinePosition[    105125,       2820]
+CellTagsIndexPosition[    105082,       2817]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -636,16 +636,231 @@ Cell["Number of images taken", "Section",
 Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{"Length", "[", "goodFileNames", "]"}]], "Input",
+ RowBox[{"nrJpg", "=", 
+  RowBox[{"Length", "[", "jpgFileNames", "]"}]}]], "Input",
+ CellChangeTimes->{{3.550674830945285*^9, 3.55067484441746*^9}}],
+
+Cell[BoxData["3955"], "Output",
+ CellChangeTimes->{{3.550674832043717*^9, 3.550674844898419*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"nrGood", "=", 
+  RowBox[{"Length", "[", "goodFileNames", "]"}]}]], "Input",
  CellChangeTimes->{{3.5502842350226717`*^9, 3.5502842603790693`*^9}, {
    3.550586490305491*^9, 3.550586494784379*^9}, 3.550594185876487*^9, {
-   3.5505950233137083`*^9, 3.550595025499856*^9}}],
+   3.5505950233137083`*^9, 3.550595025499856*^9}, {3.550674846953641*^9, 
+   3.550674850256146*^9}}],
 
 Cell[BoxData["3686"], "Output",
  CellChangeTimes->{
   3.5502842612057753`*^9, {3.550586487818227*^9, 3.550586495137459*^9}, 
    3.5505953066770697`*^9, 3.550598089407744*^9, 3.55059825487799*^9, 
-   3.5506694925855007`*^9}]
+   3.5506694925855007`*^9, 3.55067485057592*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"nrNotGood", "=", 
+  RowBox[{"nrJpg", "-", "nrGood"}]}]], "Input",
+ CellChangeTimes->{{3.5506748754630213`*^9, 3.550674884171631*^9}}],
+
+Cell[BoxData["269"], "Output",
+ CellChangeTimes->{3.550674884483014*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"PieChart", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"nrGood", ",", "nrNotGood"}], "}"}], ",", 
+   RowBox[{"ChartLabels", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"\"\<\>\"", ",", "\"\<No data\>\""}], "}"}]}]}], "]"}]], "Input",\
+
+ CellChangeTimes->{{3.5506748371710663`*^9, 3.550674856874301*^9}, {
+  3.550674887163227*^9, 3.55067498858812*^9}, {3.5506751460556393`*^9, 
+  3.550675154580141*^9}, {3.5506752924375057`*^9, 3.5506752940705223`*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[{{{}, {}}, {}, 
+   DynamicModuleBox[{DynamicChart`click$382641$382658 = False, 
+    DynamicChart`click$382645$382658 = False}, {
+     {RGBColor[0.5, 0.5, 1.], EdgeForm[GrayLevel[0.5]], {
+       {RGBColor[0.798413061722744, 0.824719615472648, 0.968322270542458], 
+        {RGBColor[0.798413061722744, 0.824719615472648, 0.968322270542458], 
+         EdgeForm[GrayLevel[0.5]], GeometricTransformationBox[
+          TagBox[
+           TagBox[
+            TooltipBox[
+             TagBox[{
+               DynamicBox[{
+                 FEPrivate`If[
+                  CurrentValue["MouseOver"], 
+                  EdgeForm[{
+                    GrayLevel[0.5], 
+                    AbsoluteThickness[1.5], 
+                    Opacity[0.66]}], {}, {}], 
+                 
+                 DiskBox[{0, 0}, 1., {-2.7142407325704987`, 
+                  3.141592653589793}]},
+                
+                ImageSizeCache->{{34.58578643762689, 
+                 325.4142135623731}, {-147.4142135623731, 
+                 143.4142135623731}}], 
+               DynamicBox[{
+                 FEPrivate`If[
+                  CurrentValue["MouseOver"], 
+                  EdgeForm[{
+                    GrayLevel[0.5], 
+                    AbsoluteThickness[1.5], 
+                    Opacity[0.66]}], {}, {}], 
+                 
+                 DiskBox[{0, 0}, 1., {-2.7142407325704987`, 
+                  3.141592653589793}]},
+                
+                ImageSizeCache->{{34.58578643762689, 
+                 325.4142135623731}, {-147.4142135623731, 
+                 143.4142135623731}}]},
+              StatusArea[#, 3686]& ,
+              TagBoxNote->"3686"],
+             StyleBox["3686", {
+               GrayLevel[0]}, StripOnInput -> False]],
+            Annotation[#, 
+             Style[3686, {
+               GrayLevel[0]}], "Tooltip"]& ],
+           
+           EventHandlerTag[{
+            "MouseClicked" :> 
+             FEPrivate`Set[DynamicChart`click$382641$382658, 
+               FEPrivate`Not[DynamicChart`click$382641$382658]], 
+             PassEventsDown -> True, PassEventsDown -> Automatic, 
+             PassEventsUp -> True}]], Dynamic[
+          If[DynamicChart`click$382641$382658, {{{1., 0.}, {0., 1.}}, {
+             0.19545160363710398`, 0.0424107372688145}}, {{1, 0}, {0, 1}}, {{
+            1, 0}, {0, 1}}]]]}, 
+        {RGBColor[0.7333333333333333, 1., 0.8337224383916991], EdgeForm[
+         GrayLevel[0.5]], GeometricTransformationBox[
+          TagBox[
+           TagBox[
+            TooltipBox[
+             TagBox[{
+               DynamicBox[{
+                 FEPrivate`If[
+                  CurrentValue["MouseOver"], 
+                  EdgeForm[{
+                    GrayLevel[0.5], 
+                    AbsoluteThickness[1.5], 
+                    Opacity[0.66]}], {}, {}], 
+                 
+                 DiskBox[{0, 0}, 
+                  1., {-3.141592653589793, -2.7142407325704987`}]},
+                
+                ImageSizeCache->{{34.58578643762689, 
+                 181.4142135623731}, {-3.4142135623731136`, 
+                 59.09678915884925}}], 
+               DynamicBox[{
+                 FEPrivate`If[
+                  CurrentValue["MouseOver"], 
+                  EdgeForm[{
+                    GrayLevel[0.5], 
+                    AbsoluteThickness[1.5], 
+                    Opacity[0.66]}], {}, {}], 
+                 
+                 DiskBox[{0, 0}, 
+                  1., {-3.141592653589793, -2.7142407325704987`}]},
+                
+                ImageSizeCache->{{34.58578643762689, 
+                 181.4142135623731}, {-3.4142135623731136`, 
+                 59.09678915884925}}]},
+              StatusArea[#, 269]& ,
+              TagBoxNote->"269"],
+             StyleBox["269", {
+               GrayLevel[0]}, StripOnInput -> False]],
+            Annotation[#, 
+             Style[269, {
+               GrayLevel[0]}], "Tooltip"]& ],
+           
+           EventHandlerTag[{
+            "MouseClicked" :> 
+             FEPrivate`Set[DynamicChart`click$382645$382658, 
+               FEPrivate`Not[DynamicChart`click$382645$382658]], 
+             PassEventsDown -> True, PassEventsDown -> Automatic, 
+             PassEventsUp -> True}]], Dynamic[
+          If[DynamicChart`click$382645$382658, {{{1., 0.}, {0., 
+             1.}}, {-0.19545160363710395`, -0.04241073726881453}}, {{1, 0}, {
+            0, 1}}, {{1, 0}, {0, 1}}]]]}}, {}}, {}}, {{{
+        GeometricTransformationBox[
+         TagBox[
+          TagBox[
+           TooltipBox[
+            TagBox[{{}, {{}, InsetBox[
+                StyleBox["\<\"\"\>",
+                 StripOnInput->False,
+                 LineColor->GrayLevel[0],
+                 FrontFaceColor->GrayLevel[0],
+                 BackFaceColor->GrayLevel[0],
+                 GraphicsColor->GrayLevel[0],
+                 
+                 FontColor->GrayLevel[
+                  0]], {0.6515053454570132, 0.14136912422938167`}]}},
+             StatusArea[#, 3686]& ,
+             TagBoxNote->"3686"],
+            StyleBox["3686", {
+              GrayLevel[0]}, StripOnInput -> False]],
+           Annotation[#, 
+            Style[3686, {
+              GrayLevel[0]}], "Tooltip"]& ],
+          
+          EventHandlerTag[{
+           "MouseClicked" :> FEPrivate`Set[DynamicChart`click$382641$382658, 
+              FEPrivate`Not[DynamicChart`click$382641$382658]], 
+            PassEventsDown -> True, PassEventsDown -> Automatic, PassEventsUp -> 
+            True}]], Dynamic[
+         If[DynamicChart`click$382641$382658, {{{1., 0.}, {0., 1.}}, {
+            0.19545160363710398`, 0.0424107372688145}}, {{1, 0}, {0, 1}}, {{1,
+            0}, {0, 1}}]]], GeometricTransformationBox[
+         TagBox[
+          TagBox[
+           TooltipBox[
+            TagBox[{{}, {{}, InsetBox[
+                StyleBox["\<\"No data\"\>",
+                 StripOnInput->False,
+                 LineColor->GrayLevel[0],
+                 FrontFaceColor->GrayLevel[0],
+                 BackFaceColor->GrayLevel[0],
+                 GraphicsColor->GrayLevel[0],
+                 
+                 FontColor->GrayLevel[
+                  0]], {-0.6515053454570131, -0.14136912422938175`}]}},
+             StatusArea[#, 269]& ,
+             TagBoxNote->"269"],
+            StyleBox["269", {
+              GrayLevel[0]}, StripOnInput -> False]],
+           Annotation[#, 
+            Style[269, {
+              GrayLevel[0]}], "Tooltip"]& ],
+          
+          EventHandlerTag[{
+           "MouseClicked" :> FEPrivate`Set[DynamicChart`click$382645$382658, 
+              FEPrivate`Not[DynamicChart`click$382645$382658]], 
+            PassEventsDown -> True, PassEventsDown -> Automatic, PassEventsUp -> 
+            True}]], Dynamic[
+         If[DynamicChart`click$382645$382658, {{{1., 0.}, {0., 
+            1.}}, {-0.19545160363710395`, -0.04241073726881453}}, {{1, 0}, {0,
+            1}}, {{1, 0}, {0, 1}}]]]}, {}}, {}}},
+    DynamicModuleValues:>{}], {}, {{{}, {}, {}, {}}, {}}},
+  ContentSelectable->False,
+  PlotRange->{{-1.2, 1.2}, {-1.2, 1.2}},
+  PlotRangePadding->Scaled[0.02]]], "Output",
+ CellChangeTimes->{
+  3.5506748571490917`*^9, {3.550674888782049*^9, 3.550674989182893*^9}, 
+   3.5506751549812813`*^9, {3.5506752946383*^9, 3.550675298410487*^9}}]
 }, Open  ]]
 }, Open  ]],
 
@@ -2201,7 +2416,7 @@ Cell[BoxData[
      RowBox[{#, ",", #2, ",", "Right"}], "]"}]& )]], "Output",
  CellChangeTimes->{{3.550673832379521*^9, 3.5506738610674677`*^9}}]
 }, Open  ]]
-}, Closed]],
+}, Open  ]],
 
 Cell["Aperture", "Section",
  CellChangeTimes->{{3.550327681718741*^9, 3.550327682636498*^9}}],
@@ -2688,87 +2903,99 @@ Cell[21036, 627, 93, 1, 26, "Subtitle"],
 Cell[CellGroupData[{
 Cell[21154, 632, 106, 1, 78, "Section"],
 Cell[CellGroupData[{
-Cell[21285, 637, 265, 4, 40, "Input"],
-Cell[21553, 643, 223, 4, 40, "Output"]
+Cell[21285, 637, 162, 3, 40, "Input"],
+Cell[21450, 642, 97, 1, 40, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[21584, 648, 343, 6, 40, "Input"],
+Cell[21930, 656, 244, 4, 40, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[22211, 665, 157, 3, 40, "Input"],
+Cell[22371, 670, 72, 1, 40, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[22480, 676, 477, 11, 40, "Input"],
+Cell[22960, 689, 7292, 173, 385, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[21825, 653, 157, 2, 78, "Section"],
+Cell[30301, 868, 157, 2, 78, "Section"],
 Cell[CellGroupData[{
-Cell[22007, 659, 202, 5, 40, "Input"],
-Cell[22212, 666, 238, 5, 40, "Output"]
+Cell[30483, 874, 202, 5, 40, "Input"],
+Cell[30688, 881, 238, 5, 40, "Output"]
 }, Open  ]],
-Cell[22465, 674, 1529, 34, 193, "Input"],
+Cell[30941, 889, 1529, 34, 193, "Input"],
 Cell[CellGroupData[{
-Cell[24019, 712, 241, 6, 40, "Input"],
-Cell[24263, 720, 99, 1, 40, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[24399, 726, 240, 6, 40, "Input"],
-Cell[24642, 734, 97, 1, 40, "Output"]
+Cell[32495, 927, 241, 6, 40, "Input"],
+Cell[32739, 935, 99, 1, 40, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[24776, 740, 892, 23, 98, "Input"],
-Cell[25671, 765, 10023, 343, 421, "Output"]
+Cell[32875, 941, 240, 6, 40, "Input"],
+Cell[33118, 949, 97, 1, 40, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[35731, 1113, 502, 9, 60, "Input"],
-Cell[36236, 1124, 3854, 77, 264, "Output"]
-}, Open  ]]
-}, Closed]],
-Cell[CellGroupData[{
-Cell[40139, 1207, 98, 1, 48, "Section"],
-Cell[CellGroupData[{
-Cell[40262, 1212, 227, 5, 40, "Input"],
-Cell[40492, 1219, 215, 5, 40, "Output"]
-}, Open  ]],
-Cell[40722, 1227, 1111, 28, 193, "Input"],
-Cell[CellGroupData[{
-Cell[41858, 1259, 352, 8, 40, "Input"],
-Cell[42213, 1269, 827, 23, 79, "Output"]
-}, Open  ]],
-Cell[43055, 1295, 1212, 33, 117, "Input"],
-Cell[CellGroupData[{
-Cell[44292, 1332, 820, 17, 79, "Input"],
-Cell[45115, 1351, 19869, 453, 385, "Output"]
+Cell[33252, 955, 892, 23, 98, "Input"],
+Cell[34147, 980, 10023, 343, 421, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[65021, 1809, 246, 5, 40, "Input"],
-Cell[65270, 1816, 16250, 385, 387, "Output"]
+Cell[44207, 1328, 502, 9, 60, "Input"],
+Cell[44712, 1339, 3854, 77, 264, "Output"]
 }, Open  ]]
 }, Closed]],
-Cell[81547, 2205, 93, 1, 48, "Section"],
-Cell[81643, 2208, 96, 1, 48, "Section"],
-Cell[81742, 2211, 100, 1, 48, "Section"],
-Cell[81845, 2214, 103, 1, 48, "Section"],
-Cell[81951, 2217, 93, 1, 48, "Section"],
-Cell[82047, 2220, 99, 1, 48, "Section"],
-Cell[82149, 2223, 95, 1, 48, "Section"],
-Cell[82247, 2226, 88, 1, 48, "Section"],
-Cell[82338, 2229, 209, 3, 48, "Section"],
 Cell[CellGroupData[{
-Cell[82572, 2236, 96, 1, 48, "Section"],
+Cell[48615, 1422, 98, 1, 48, "Section"],
 Cell[CellGroupData[{
-Cell[82693, 2241, 206, 5, 40, "Input"],
-Cell[82902, 2248, 105, 1, 40, "Output"]
+Cell[48738, 1427, 227, 5, 40, "Input"],
+Cell[48968, 1434, 215, 5, 40, "Output"]
+}, Open  ]],
+Cell[49198, 1442, 1111, 28, 193, "Input"],
+Cell[CellGroupData[{
+Cell[50334, 1474, 352, 8, 40, "Input"],
+Cell[50689, 1484, 827, 23, 79, "Output"]
+}, Open  ]],
+Cell[51531, 1510, 1212, 33, 117, "Input"],
+Cell[CellGroupData[{
+Cell[52768, 1547, 820, 17, 79, "Input"],
+Cell[53591, 1566, 19869, 453, 385, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[73497, 2024, 246, 5, 40, "Input"],
+Cell[73746, 2031, 16250, 385, 387, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[90023, 2420, 93, 1, 78, "Section"],
+Cell[90119, 2423, 96, 1, 48, "Section"],
+Cell[90218, 2426, 100, 1, 48, "Section"],
+Cell[90321, 2429, 103, 1, 48, "Section"],
+Cell[90427, 2432, 93, 1, 48, "Section"],
+Cell[90523, 2435, 99, 1, 48, "Section"],
+Cell[90625, 2438, 95, 1, 48, "Section"],
+Cell[90723, 2441, 88, 1, 48, "Section"],
+Cell[90814, 2444, 209, 3, 48, "Section"],
+Cell[CellGroupData[{
+Cell[91048, 2451, 96, 1, 48, "Section"],
+Cell[CellGroupData[{
+Cell[91169, 2456, 206, 5, 40, "Input"],
+Cell[91378, 2463, 105, 1, 40, "Output"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[83068, 2256, 97, 1, 26, "Subtitle"],
+Cell[91544, 2471, 97, 1, 26, "Subtitle"],
 Cell[CellGroupData[{
-Cell[83190, 2261, 165, 2, 78, "Section"],
-Cell[83358, 2265, 1127, 29, 193, "Input"],
+Cell[91666, 2476, 165, 2, 78, "Section"],
+Cell[91834, 2480, 1127, 29, 193, "Input"],
 Cell[CellGroupData[{
-Cell[84510, 2298, 409, 10, 60, "Input"],
-Cell[84922, 2310, 370, 9, 40, "Output"]
+Cell[92986, 2513, 409, 10, 60, "Input"],
+Cell[93398, 2525, 370, 9, 40, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[85329, 2324, 306, 6, 40, "Input"],
-Cell[85638, 2332, 10405, 247, 385, "Output"]
+Cell[93805, 2539, 306, 6, 40, "Input"],
+Cell[94114, 2547, 10405, 247, 385, "Output"]
 }, Open  ]]
 }, Closed]],
-Cell[96070, 2583, 147, 2, 48, "Section"]
+Cell[104546, 2798, 147, 2, 48, "Section"]
 }, Open  ]]
 }, Open  ]]
 }
