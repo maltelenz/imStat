@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[   2783201,      50605]
-NotebookOptionsPosition[   2768073,      50117]
-NotebookOutlinePosition[   2768477,      50133]
-CellTagsIndexPosition[   2768434,      50130]
+NotebookDataLength[   2800923,      50917]
+NotebookOptionsPosition[   2785750,      50428]
+NotebookOutlinePosition[   2786154,      50444]
+CellTagsIndexPosition[   2786111,      50441]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -10094,7 +10094,7 @@ gCAmpjsvaggayWi4QCDr2fsEdJ0g/XiuAVbw7krqsjhkC/3HEb4GVhZLARVW
 1bd0K/U4kRymW8hSfYVaAMSjs8q/Enr8DwAHmKY=\
 \>"]]
 }, Open  ]]
-}, Open  ]],
+}, Closed]],
 
 Cell[CellGroupData[{
 
@@ -13241,29 +13241,46 @@ Cell[BoxData[
    RowBox[{"nrISO", ",", 
     RowBox[{"ChartLabels", "\[Rule]", 
      RowBox[{"Placed", "[", 
-      RowBox[{"labelISO", ",", "\"\<RadialCallout\>\""}], "]"}]}]}], 
-   "]"}]}]], "Input",
+      RowBox[{"labelISO", ",", "\"\<RadialCallout\>\""}], "]"}]}], ",", 
+    RowBox[{"ChartStyle", "\[Rule]", 
+     RowBox[{"Prepend", "[", 
+      RowBox[{
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"GrayLevel", "[", 
+          RowBox[{"1", "-", 
+           RowBox[{"i", "/", 
+            RowBox[{"Length", "[", "labelISO", "]"}]}]}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"i", ",", 
+           RowBox[{"Length", "[", "labelISO", "]"}]}], "}"}]}], "]"}], ",", 
+       RowBox[{"Directive", "[", 
+        RowBox[{
+         RowBox[{"EdgeForm", "[", "Dashed", "]"}], ",", "White"}], "]"}]}], 
+      "]"}]}]}], "]"}]}]], "Input",
  CellChangeTimes->{{3.5506907299733763`*^9, 3.5506907664641237`*^9}, {
   3.550690839418941*^9, 3.550690867498455*^9}, {3.550690922623726*^9, 
   3.5506909301982393`*^9}, {3.550691201268879*^9, 3.550691210197741*^9}, {
   3.550691250713542*^9, 3.5506912930994062`*^9}, {3.550743749498934*^9, 
-  3.550743878995764*^9}}],
+  3.550743878995764*^9}, {3.5507476227872763`*^9, 3.550747882622262*^9}, {
+  3.550748165920142*^9, 3.55074820401003*^9}, {3.5507482390509*^9, 
+  3.550748316171732*^9}}],
 
 Cell[BoxData[
  GraphicsBox[{{{}, {}}, {}, 
-   DynamicModuleBox[{DynamicChart`click$604589$604662 = False, 
-    DynamicChart`click$604593$604662 = False, 
-    DynamicChart`click$604597$604662 = False, 
-    DynamicChart`click$604601$604662 = False, 
-    DynamicChart`click$604605$604662 = False, 
-    DynamicChart`click$604609$604662 = False, 
-    DynamicChart`click$604613$604662 = False, 
-    DynamicChart`click$604617$604662 = False, 
-    DynamicChart`click$604621$604662 = False, 
-    DynamicChart`click$604625$604662 = False}, {
+   DynamicModuleBox[{DynamicChart`click$702235$702308 = False, 
+    DynamicChart`click$702239$702308 = False, 
+    DynamicChart`click$702243$702308 = False, 
+    DynamicChart`click$702247$702308 = False, 
+    DynamicChart`click$702251$702308 = False, 
+    DynamicChart`click$702255$702308 = False, 
+    DynamicChart`click$702259$702308 = False, 
+    DynamicChart`click$702263$702308 = False, 
+    DynamicChart`click$702267$702308 = False, 
+    DynamicChart`click$702271$702308 = False}, {
      {RGBColor[0.5, 0.5, 1.], EdgeForm[GrayLevel[0.5]], {
        {RGBColor[0.66, 0.7960000000000002, 1.], 
-        {RGBColor[0.66, 0.7960000000000002, 1.], EdgeForm[GrayLevel[0.5]], 
+        {GrayLevel[1], EdgeForm[Dashing[{Small, Small}]], 
          GeometricTransformationBox[
           TagBox[
            TagBox[
@@ -13305,14 +13322,16 @@ Cell[BoxData[
            
            EventHandlerTag[{
             "MouseClicked" :> 
-             FEPrivate`Set[DynamicChart`click$604589$604662, 
-               FEPrivate`Not[DynamicChart`click$604589$604662]], 
+             FEPrivate`Set[DynamicChart`click$702235$702308, 
+               FEPrivate`Not[DynamicChart`click$702235$702308]], 
              PassEventsDown -> True, PassEventsDown -> Automatic, 
              PassEventsUp -> True}]], Dynamic[
-          If[DynamicChart`click$604589$604662, {{{1., 0.}, {0., 
+          If[DynamicChart`click$702235$702308, {{{1., 0.}, {0., 
              1.}}, {-0.1906076421897722, 0.06057001517959019}}, {{1, 0}, {0, 
             1}}, {{1, 0}, {0, 1}}]]]}, 
-        {RGBColor[0.66, 0.8725, 1.], EdgeForm[GrayLevel[0.5]], 
+        {GrayLevel[
+          NCache[
+           Rational[17, 18], 0.9444444444444444]], EdgeForm[GrayLevel[0.5]], 
          GeometricTransformationBox[
           TagBox[
            TagBox[
@@ -13355,14 +13374,16 @@ Cell[BoxData[
                GrayLevel[0]}], "Tooltip"]& ],
            EventHandlerTag[{
             "MouseClicked" :> 
-             FEPrivate`Set[DynamicChart`click$604593$604662, 
-               FEPrivate`Not[DynamicChart`click$604593$604662]], 
+             FEPrivate`Set[DynamicChart`click$702239$702308, 
+               FEPrivate`Not[DynamicChart`click$702239$702308]], 
              PassEventsDown -> True, PassEventsDown -> Automatic, 
              PassEventsUp -> True}]], Dynamic[
-          If[DynamicChart`click$604593$604662, {{{1., 0.}, {0., 1.}}, {
+          If[DynamicChart`click$702239$702308, {{{1., 0.}, {0., 1.}}, {
              0.10608663085853726`, 0.1695453530860827}}, {{1, 0}, {0, 1}}, {{
             1, 0}, {0, 1}}]]]}, 
-        {RGBColor[0.66, 0.9489999999999998, 1.], EdgeForm[GrayLevel[0.5]], 
+        {GrayLevel[
+          NCache[
+           Rational[8, 9], 0.8888888888888888]], EdgeForm[GrayLevel[0.5]], 
          GeometricTransformationBox[
           TagBox[
            TagBox[
@@ -13406,14 +13427,16 @@ Cell[BoxData[
            
            EventHandlerTag[{
             "MouseClicked" :> 
-             FEPrivate`Set[DynamicChart`click$604597$604662, 
-               FEPrivate`Not[DynamicChart`click$604597$604662]], 
+             FEPrivate`Set[DynamicChart`click$702243$702308, 
+               FEPrivate`Not[DynamicChart`click$702243$702308]], 
              PassEventsDown -> True, PassEventsDown -> Automatic, 
              PassEventsUp -> True}]], Dynamic[
-          If[DynamicChart`click$604597$604662, {{{1., 0.}, {0., 1.}}, {
+          If[DynamicChart`click$702243$702308, {{{1., 0.}, {0., 1.}}, {
              0.14909191760336313`, -0.13331016504885135`}}, {{1, 0}, {0, 
             1}}, {{1, 0}, {0, 1}}]]]}, 
-        {RGBColor[0.66, 1., 0.9744999999999999], EdgeForm[GrayLevel[0.5]], 
+        {GrayLevel[
+          NCache[
+           Rational[5, 6], 0.8333333333333334]], EdgeForm[GrayLevel[0.5]], 
          GeometricTransformationBox[
           TagBox[
            TagBox[
@@ -13457,14 +13480,16 @@ Cell[BoxData[
            
            EventHandlerTag[{
             "MouseClicked" :> 
-             FEPrivate`Set[DynamicChart`click$604601$604662, 
-               FEPrivate`Not[DynamicChart`click$604601$604662]], 
+             FEPrivate`Set[DynamicChart`click$702247$702308, 
+               FEPrivate`Not[DynamicChart`click$702247$702308]], 
              PassEventsDown -> True, PassEventsDown -> Automatic, 
              PassEventsUp -> True}]], Dynamic[
-          If[DynamicChart`click$604601$604662, {{{1., 0.}, {0., 1.}}, {
+          If[DynamicChart`click$702247$702308, {{{1., 0.}, {0., 1.}}, {
              0.11433486592645635`, -0.16409612558978734`}}, {{1, 0}, {0, 
             1}}, {{1, 0}, {0, 1}}]]]}, 
-        {RGBColor[0.66, 1., 0.8979999999999999], EdgeForm[GrayLevel[0.5]], 
+        {GrayLevel[
+          NCache[
+           Rational[7, 9], 0.7777777777777778]], EdgeForm[GrayLevel[0.5]], 
          GeometricTransformationBox[
           TagBox[
            TagBox[
@@ -13508,14 +13533,16 @@ Cell[BoxData[
            
            EventHandlerTag[{
             "MouseClicked" :> 
-             FEPrivate`Set[DynamicChart`click$604605$604662, 
-               FEPrivate`Not[DynamicChart`click$604605$604662]], 
+             FEPrivate`Set[DynamicChart`click$702251$702308, 
+               FEPrivate`Not[DynamicChart`click$702251$702308]], 
              PassEventsDown -> True, PassEventsDown -> Automatic, 
              PassEventsUp -> True}]], Dynamic[
-          If[DynamicChart`click$604605$604662, {{{1., 0.}, {0., 
+          If[DynamicChart`click$702251$702308, {{{1., 0.}, {0., 
              1.}}, {-0.03409527680554662, -0.19707235244841717`}}, {{1, 0}, {
             0, 1}}, {{1, 0}, {0, 1}}]]]}, 
-        {RGBColor[0.66, 1., 0.8214999999999999], EdgeForm[GrayLevel[0.5]], 
+        {GrayLevel[
+          NCache[
+           Rational[13, 18], 0.7222222222222222]], EdgeForm[GrayLevel[0.5]], 
          GeometricTransformationBox[
           TagBox[
            TagBox[
@@ -13559,14 +13586,16 @@ Cell[BoxData[
            
            EventHandlerTag[{
             "MouseClicked" :> 
-             FEPrivate`Set[DynamicChart`click$604609$604662, 
-               FEPrivate`Not[DynamicChart`click$604609$604662]], 
+             FEPrivate`Set[DynamicChart`click$702255$702308, 
+               FEPrivate`Not[DynamicChart`click$702255$702308]], 
              PassEventsDown -> True, PassEventsDown -> Automatic, 
              PassEventsUp -> True}]], Dynamic[
-          If[DynamicChart`click$604609$604662, {{{1., 0.}, {0., 
+          If[DynamicChart`click$702255$702308, {{{1., 0.}, {0., 
              1.}}, {-0.1634110727013911, -0.11531184379143661`}}, {{1, 0}, {0,
              1}}, {{1, 0}, {0, 1}}]]]}, 
-        {RGBColor[0.66, 1., 0.745], EdgeForm[GrayLevel[0.5]], 
+        {GrayLevel[
+          NCache[
+           Rational[2, 3], 0.6666666666666666]], EdgeForm[GrayLevel[0.5]], 
          GeometricTransformationBox[
           TagBox[
            TagBox[
@@ -13610,14 +13639,16 @@ Cell[BoxData[
            
            EventHandlerTag[{
             "MouseClicked" :> 
-             FEPrivate`Set[DynamicChart`click$604613$604662, 
-               FEPrivate`Not[DynamicChart`click$604613$604662]], 
+             FEPrivate`Set[DynamicChart`click$702259$702308, 
+               FEPrivate`Not[DynamicChart`click$702259$702308]], 
              PassEventsDown -> True, PassEventsDown -> Automatic, 
              PassEventsUp -> True}]], Dynamic[
-          If[DynamicChart`click$604613$604662, {{{1., 0.}, {0., 
+          If[DynamicChart`click$702259$702308, {{{1., 0.}, {0., 
              1.}}, {-0.16954535308608276`, -0.10608663085853715`}}, {{1, 0}, {
             0, 1}}, {{1, 0}, {0, 1}}]]]}, 
-        {RGBColor[0.66, 1., 0.6685], EdgeForm[GrayLevel[0.5]], 
+        {GrayLevel[
+          NCache[
+           Rational[11, 18], 0.6111111111111112]], EdgeForm[GrayLevel[0.5]], 
          GeometricTransformationBox[
           TagBox[
            TagBox[
@@ -13661,14 +13692,16 @@ Cell[BoxData[
            
            EventHandlerTag[{
             "MouseClicked" :> 
-             FEPrivate`Set[DynamicChart`click$604617$604662, 
-               FEPrivate`Not[DynamicChart`click$604617$604662]], 
+             FEPrivate`Set[DynamicChart`click$702263$702308, 
+               FEPrivate`Not[DynamicChart`click$702263$702308]], 
              PassEventsDown -> True, PassEventsDown -> Automatic, 
              PassEventsUp -> True}]], Dynamic[
-          If[DynamicChart`click$604617$604662, {{{1., 0.}, {0., 
+          If[DynamicChart`click$702263$702308, {{{1., 0.}, {0., 
              1.}}, {-0.17416292992502921`, -0.09832229574175622}}, {{1, 0}, {
             0, 1}}, {{1, 0}, {0, 1}}]]]}, 
-        {RGBColor[0.7280000000000001, 1., 0.66], EdgeForm[GrayLevel[0.5]], 
+        {GrayLevel[
+          NCache[
+           Rational[5, 9], 0.5555555555555556]], EdgeForm[GrayLevel[0.5]], 
          GeometricTransformationBox[
           TagBox[
            TagBox[
@@ -13712,14 +13745,16 @@ Cell[BoxData[
            
            EventHandlerTag[{
             "MouseClicked" :> 
-             FEPrivate`Set[DynamicChart`click$604621$604662, 
-               FEPrivate`Not[DynamicChart`click$604621$604662]], 
+             FEPrivate`Set[DynamicChart`click$702267$702308, 
+               FEPrivate`Not[DynamicChart`click$702267$702308]], 
              PassEventsDown -> True, PassEventsDown -> Automatic, 
              PassEventsUp -> True}]], Dynamic[
-          If[DynamicChart`click$604621$604662, {{{1., 0.}, {0., 
+          If[DynamicChart`click$702267$702308, {{{1., 0.}, {0., 
              1.}}, {-0.1788086226988691, -0.08959618545749298}}, {{1, 0}, {0, 
             1}}, {{1, 0}, {0, 1}}]]]}, {}, {}, {}, {}, {}, {}, {}, 
-        {RGBColor[1., 0.66, 0.66], EdgeForm[GrayLevel[0.5]], 
+        {GrayLevel[
+          NCache[
+           Rational[1, 9], 0.1111111111111111]], EdgeForm[GrayLevel[0.5]], 
          GeometricTransformationBox[
           TagBox[
            TagBox[
@@ -13763,11 +13798,11 @@ Cell[BoxData[
            
            EventHandlerTag[{
             "MouseClicked" :> 
-             FEPrivate`Set[DynamicChart`click$604625$604662, 
-               FEPrivate`Not[DynamicChart`click$604625$604662]], 
+             FEPrivate`Set[DynamicChart`click$702271$702308, 
+               FEPrivate`Not[DynamicChart`click$702271$702308]], 
              PassEventsDown -> True, PassEventsDown -> Automatic, 
              PassEventsUp -> True}]], Dynamic[
-          If[DynamicChart`click$604625$604662, {{{1., 0.}, {0., 
+          If[DynamicChart`click$702271$702308, {{{1., 0.}, {0., 
              1.}}, {-0.19569073735449072`, -0.04129328412291431}}, {{1, 0}, {
             0, 1}}, {{1, 0}, {0, 1}}]]]}}, {}}, {}}, {{{
         GeometricTransformationBox[
@@ -13804,11 +13839,11 @@ Cell[BoxData[
               GrayLevel[0]}], "Tooltip"]& ],
           
           EventHandlerTag[{
-           "MouseClicked" :> FEPrivate`Set[DynamicChart`click$604589$604662, 
-              FEPrivate`Not[DynamicChart`click$604589$604662]], 
+           "MouseClicked" :> FEPrivate`Set[DynamicChart`click$702235$702308, 
+              FEPrivate`Not[DynamicChart`click$702235$702308]], 
             PassEventsDown -> True, PassEventsDown -> Automatic, PassEventsUp -> 
             True}]], Dynamic[
-         If[DynamicChart`click$604589$604662, {{{1., 0.}, {0., 
+         If[DynamicChart`click$702235$702308, {{{1., 0.}, {0., 
             1.}}, {-0.1906076421897722, 0.06057001517959019}}, {{1, 0}, {0, 
            1}}, {{1, 0}, {0, 1}}]]], GeometricTransformationBox[
          TagBox[
@@ -13829,6 +13864,7 @@ Cell[BoxData[
                   FrontFaceColor->GrayLevel[0],
                   BackFaceColor->GrayLevel[0],
                   GraphicsColor->GrayLevel[0],
+                  
                   FontColor->GrayLevel[
                    0]], {0.7046937958936623, 0.9324994419734549}, {-1, 0}]}}},
              
@@ -13841,11 +13877,11 @@ Cell[BoxData[
               GrayLevel[0]}], "Tooltip"]& ],
           
           EventHandlerTag[{
-           "MouseClicked" :> FEPrivate`Set[DynamicChart`click$604593$604662, 
-              FEPrivate`Not[DynamicChart`click$604593$604662]], 
+           "MouseClicked" :> FEPrivate`Set[DynamicChart`click$702239$702308, 
+              FEPrivate`Not[DynamicChart`click$702239$702308]], 
             PassEventsDown -> True, PassEventsDown -> Automatic, PassEventsUp -> 
             True}]], Dynamic[
-         If[DynamicChart`click$604593$604662, {{{1., 0.}, {0., 1.}}, {
+         If[DynamicChart`click$702239$702308, {{{1., 0.}, {0., 1.}}, {
             0.10608663085853726`, 0.1695453530860827}}, {{1, 0}, {0, 1}}, {{1,
             0}, {0, 1}}]]], GeometricTransformationBox[
          TagBox[
@@ -13876,12 +13912,13 @@ Cell[BoxData[
            Annotation[#, 
             Style[266, {
               GrayLevel[0]}], "Tooltip"]& ],
+          
           EventHandlerTag[{
-           "MouseClicked" :> FEPrivate`Set[DynamicChart`click$604597$604662, 
-              FEPrivate`Not[DynamicChart`click$604597$604662]], 
+           "MouseClicked" :> FEPrivate`Set[DynamicChart`click$702243$702308, 
+              FEPrivate`Not[DynamicChart`click$702243$702308]], 
             PassEventsDown -> True, PassEventsDown -> Automatic, PassEventsUp -> 
             True}]], Dynamic[
-         If[DynamicChart`click$604597$604662, {{{1., 0.}, {0., 1.}}, {
+         If[DynamicChart`click$702243$702308, {{{1., 0.}, {0., 1.}}, {
             0.14909191760336313`, -0.13331016504885135`}}, {{1, 0}, {0, 
            1}}, {{1, 0}, {0, 1}}]]], GeometricTransformationBox[
          TagBox[
@@ -13914,11 +13951,11 @@ Cell[BoxData[
               GrayLevel[0]}], "Tooltip"]& ],
           
           EventHandlerTag[{
-           "MouseClicked" :> FEPrivate`Set[DynamicChart`click$604601$604662, 
-              FEPrivate`Not[DynamicChart`click$604601$604662]], 
+           "MouseClicked" :> FEPrivate`Set[DynamicChart`click$702247$702308, 
+              FEPrivate`Not[DynamicChart`click$702247$702308]], 
             PassEventsDown -> True, PassEventsDown -> Automatic, PassEventsUp -> 
             True}]], Dynamic[
-         If[DynamicChart`click$604601$604662, {{{1., 0.}, {0., 1.}}, {
+         If[DynamicChart`click$702247$702308, {{{1., 0.}, {0., 1.}}, {
             0.11433486592645635`, -0.16409612558978734`}}, {{1, 0}, {0, 
            1}}, {{1, 0}, {0, 1}}]]], GeometricTransformationBox[
          TagBox[
@@ -13952,11 +13989,11 @@ Cell[BoxData[
               GrayLevel[0]}], "Tooltip"]& ],
           
           EventHandlerTag[{
-           "MouseClicked" :> FEPrivate`Set[DynamicChart`click$604605$604662, 
-              FEPrivate`Not[DynamicChart`click$604605$604662]], 
+           "MouseClicked" :> FEPrivate`Set[DynamicChart`click$702251$702308, 
+              FEPrivate`Not[DynamicChart`click$702251$702308]], 
             PassEventsDown -> True, PassEventsDown -> Automatic, PassEventsUp -> 
             True}]], Dynamic[
-         If[DynamicChart`click$604605$604662, {{{1., 0.}, {0., 
+         If[DynamicChart`click$702251$702308, {{{1., 0.}, {0., 
             1.}}, {-0.03409527680554662, -0.19707235244841717`}}, {{1, 0}, {0,
             1}}, {{1, 0}, {0, 1}}]]], GeometricTransformationBox[
          TagBox[
@@ -13990,11 +14027,11 @@ Cell[BoxData[
               GrayLevel[0]}], "Tooltip"]& ],
           
           EventHandlerTag[{
-           "MouseClicked" :> FEPrivate`Set[DynamicChart`click$604609$604662, 
-              FEPrivate`Not[DynamicChart`click$604609$604662]], 
+           "MouseClicked" :> FEPrivate`Set[DynamicChart`click$702255$702308, 
+              FEPrivate`Not[DynamicChart`click$702255$702308]], 
             PassEventsDown -> True, PassEventsDown -> Automatic, PassEventsUp -> 
             True}]], Dynamic[
-         If[DynamicChart`click$604609$604662, {{{1., 0.}, {0., 
+         If[DynamicChart`click$702255$702308, {{{1., 0.}, {0., 
             1.}}, {-0.1634110727013911, -0.11531184379143661`}}, {{1, 0}, {0, 
            1}}, {{1, 0}, {0, 1}}]]], GeometricTransformationBox[
          TagBox[
@@ -14015,6 +14052,7 @@ Cell[BoxData[
                   FrontFaceColor->GrayLevel[0],
                   BackFaceColor->GrayLevel[0],
                   GraphicsColor->GrayLevel[0],
+                  
                   FontColor->GrayLevel[
                    0]], {-1.066408512590672, -0.5834764697219543}, {1, 0}]}}},
              
@@ -14027,11 +14065,11 @@ Cell[BoxData[
               GrayLevel[0]}], "Tooltip"]& ],
           
           EventHandlerTag[{
-           "MouseClicked" :> FEPrivate`Set[DynamicChart`click$604613$604662, 
-              FEPrivate`Not[DynamicChart`click$604613$604662]], 
+           "MouseClicked" :> FEPrivate`Set[DynamicChart`click$702259$702308, 
+              FEPrivate`Not[DynamicChart`click$702259$702308]], 
             PassEventsDown -> True, PassEventsDown -> Automatic, PassEventsUp -> 
             True}]], Dynamic[
-         If[DynamicChart`click$604613$604662, {{{1., 0.}, {0., 
+         If[DynamicChart`click$702259$702308, {{{1., 0.}, {0., 
             1.}}, {-0.16954535308608276`, -0.10608663085853715`}}, {{1, 0}, {
            0, 1}}, {{1, 0}, {0, 1}}]]], GeometricTransformationBox[
          TagBox[
@@ -14065,11 +14103,11 @@ Cell[BoxData[
               GrayLevel[0]}], "Tooltip"]& ],
           
           EventHandlerTag[{
-           "MouseClicked" :> FEPrivate`Set[DynamicChart`click$604617$604662, 
-              FEPrivate`Not[DynamicChart`click$604617$604662]], 
+           "MouseClicked" :> FEPrivate`Set[DynamicChart`click$702263$702308, 
+              FEPrivate`Not[DynamicChart`click$702263$702308]], 
             PassEventsDown -> True, PassEventsDown -> Automatic, PassEventsUp -> 
             True}]], Dynamic[
-         If[DynamicChart`click$604617$604662, {{{1., 0.}, {0., 
+         If[DynamicChart`click$702263$702308, {{{1., 0.}, {0., 
             1.}}, {-0.17416292992502921`, -0.09832229574175622}}, {{1, 0}, {0,
             1}}, {{1, 0}, {0, 1}}]]], GeometricTransformationBox[
          TagBox[
@@ -14103,11 +14141,11 @@ Cell[BoxData[
               GrayLevel[0]}], "Tooltip"]& ],
           
           EventHandlerTag[{
-           "MouseClicked" :> FEPrivate`Set[DynamicChart`click$604621$604662, 
-              FEPrivate`Not[DynamicChart`click$604621$604662]], 
+           "MouseClicked" :> FEPrivate`Set[DynamicChart`click$702267$702308, 
+              FEPrivate`Not[DynamicChart`click$702267$702308]], 
             PassEventsDown -> True, PassEventsDown -> Automatic, PassEventsUp -> 
             True}]], Dynamic[
-         If[DynamicChart`click$604621$604662, {{{1., 0.}, {0., 
+         If[DynamicChart`click$702267$702308, {{{1., 0.}, {0., 
             1.}}, {-0.1788086226988691, -0.08959618545749298}}, {{1, 0}, {0, 
            1}}, {{1, 0}, {0, 1}}]]], {}, {}, {}, {}, {}, {}, {}, 
         GeometricTransformationBox[
@@ -14142,24 +14180,297 @@ Cell[BoxData[
               GrayLevel[0]}], "Tooltip"]& ],
           
           EventHandlerTag[{
-           "MouseClicked" :> FEPrivate`Set[DynamicChart`click$604625$604662, 
-              FEPrivate`Not[DynamicChart`click$604625$604662]], 
+           "MouseClicked" :> FEPrivate`Set[DynamicChart`click$702271$702308, 
+              FEPrivate`Not[DynamicChart`click$702271$702308]], 
             PassEventsDown -> True, PassEventsDown -> Automatic, PassEventsUp -> 
             True}]], Dynamic[
-         If[DynamicChart`click$604625$604662, {{{1., 0.}, {0., 
+         If[DynamicChart`click$702271$702308, {{{1., 0.}, {0., 
             1.}}, {-0.19569073735449072`, -0.04129328412291431}}, {{1, 0}, {0,
             1}}, {{1, 0}, {0, 1}}]]]}, {}}, {}}},
     DynamicModuleValues:>{}], {}, {{{}, {}, {}, {}}, {}}},
   ContentSelectable->False,
   PlotRange->{{-1.2, 1.2}, {-1.2, 1.2}},
   PlotRangePadding->Scaled[0.1]]], "Output",
- CellChangeTimes->{{3.550690738781191*^9, 3.55069075406321*^9}, {
-  3.550690839919252*^9, 3.550690868150935*^9}, {3.5506909079383574`*^9, 
-  3.550690931169765*^9}, {3.550691196048099*^9, 3.5506912107002783`*^9}, {
-  3.550691258997718*^9, 3.550691293334322*^9}, {3.550743747901952*^9, 
-  3.550743879480215*^9}}]
+ CellChangeTimes->{
+  3.5507478832732973`*^9, {3.550748167003378*^9, 3.550748180857871*^9}, {
+   3.5507482396940193`*^9, 3.550748322778138*^9}},
+ ImageCache->GraphicsData["CompressedBitmap", "\<\
+eJztnXncjdX6/+/sZ+Axk0opQpIjw7dUMneShiMpOoTKPCRUSslMKUTIrDpF
+SYZIjqIy1GmgDCFDJJV5nnmGff+u91rX2vve+9l8j+d3fq/X74/Tq70f+977
+vtZnXeua13A3bN2zU/snW/fs3LZ1qQZPt+7RqXPbZ0rd1f1puRS6xPMu6cSr
+lMe/fc9zb77873fmjSv//fd//x39d3/zp3Ce8Ontz84Z1uLYNQVKdmgzaXWu
+Y1nmV8XTdy+Y0qdd3/ajJ4+e0rddn+ILdqef9/pmS3KAJVnQP7psR91SdQsu
+O2pIXeKHD81c8nCVOi2WHfHCfrjOkWWPfFD170tyHcpKeP2SQ2Hf22RJ9jV/
+Lk3xz/024c1OnXr3eWnogKH9OxwuXbj0ix2GvFXwx6NZef2TP25sV6FG8fd3
+ZxqEmbvf21DjL+0v+3Ffwut5fzzpx1KX96x6B78cVGfQskMFs2LBF/CPfbXt
+7jJ1iiw+ZD4X8Q8t3lanzD0lvvoj4fUCXx1z1PtZ6rn8rCM9vx0+tPTy7V8E
+KRvcbQXfjBh87QzuBNfBfcevv/6ad8m7777rhdZNmDBh8BdffGEa+S44pkXy
+h4+vHjSu7+Cdla6JH4SqtVsuPwqzax9Z3iIwCNmuMwj5DLnQTbt37351yZIl
+2VtKkvdw5ZNrB/5RtUQ9WsplLucVIVk4oV+nQa3HvzVu4sCO/YovjAhP9uv5
+bSt5MjIy5s+YMSPYylv2K9Nh31oz79uYr+Z+8MEH+c+dO5fgq4FLly6t/scf
+fyT4qsnGjRvb//jjjwm+uv7gwYOvL1q0KMFXoXA4vPC9994LfvW2/WrR9OnT
+Iwi/iflq1syZM5/+9ttvi584ccIwzPeuyS19rblz584ecn3q/Pnzv3r77bd/
+HTdu3N4xY8YcHTVq1PGRI0eeGTFixFl5ZbzyyiuZ8sp6+eWXw7yGDBniDxo0
+KDx48OAM+Xz21VdfPfHaa6/tGz169M7x48eve+uttz4VlG/Nmzdv2OLFi5/5
+5ptv7t26dWuatDk92J/CVx87dixz4MCB/oABAzKF4pqpU6ceFATpw4cPD7/0
+0ku+tBTm32PHjvWFqi+89j/66CNfEPuffPKJv3DhQi+X/9lnn+XyEcTL/eXL
+l/tfffWV/69//cuXrpl/yyj4AsP/5z//aW6cM2eOISQc86Xb4YkTJ2ZJo1nS
+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\
+\>"]]
 }, Open  ]]
-}, Closed]],
+}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -50392,9 +50703,9 @@ Cell[358699, 8697, 1637, 41, 136, "Input"],
 Cell[360339, 8740, 66574, 1354, 263, 50596, 1091, "CachedBoxData", "BoxData", \
 "Output"]
 }, Open  ]]
-}, Open  ]],
+}, Closed]],
 Cell[CellGroupData[{
-Cell[426962, 10100, 99, 1, 78, "Section"],
+Cell[426962, 10100, 99, 1, 48, "Section"],
 Cell[CellGroupData[{
 Cell[427086, 10105, 336, 8, 40, "Input"],
 Cell[427425, 10115, 217, 4, 40, "Output"]
@@ -50469,140 +50780,141 @@ Cell[556749, 13208, 273, 7, 40, "Input"],
 Cell[557025, 13217, 673, 15, 79, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[557735, 13237, 570, 12, 60, "Input"],
-Cell[558308, 13251, 38868, 908, 385, "Output"]
+Cell[557735, 13237, 1283, 29, 117, "Input"],
+Cell[559021, 13268, 55832, 1202, 385, 38988, 924, "CachedBoxData", "BoxData", \
+"Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[614902, 14476, 227, 3, 78, "Section"],
+Cell[CellGroupData[{
+Cell[615154, 14483, 674, 19, 79, "Input"],
+Cell[615831, 14504, 372, 9, 40, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[616240, 14518, 409, 10, 60, "Input"],
+Cell[616652, 14530, 490, 10, 43, "Message"],
+Cell[617145, 14542, 516, 11, 24, "Message"],
+Cell[617664, 14555, 272, 5, 40, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[617973, 14565, 2098, 46, 212, "Input"],
+Cell[620074, 14613, 8076, 189, 385, "Output"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[597225, 14165, 227, 3, 48, "Section"],
+Cell[628199, 14808, 209, 3, 48, "Section"],
+Cell[628411, 14813, 1584, 33, 117, "Input"],
+Cell[629998, 14848, 333, 7, 40, "Input"],
+Cell[630334, 14857, 325, 8, 40, "Input"],
+Cell[630662, 14867, 643, 17, 98, "Input"],
 Cell[CellGroupData[{
-Cell[597477, 14172, 674, 19, 79, "Input"],
-Cell[598154, 14193, 372, 9, 40, "Output"]
+Cell[631330, 14888, 195, 4, 40, "Input"],
+Cell[631528, 14894, 837, 13, 98, "Output"]
+}, Open  ]],
+Cell[632380, 14910, 784, 23, 79, "Input"],
+Cell[633167, 14935, 1389, 31, 212, "Input"],
+Cell[634559, 14968, 273, 7, 40, "Input"],
+Cell[CellGroupData[{
+Cell[634857, 14979, 242, 6, 40, "Input"],
+Cell[635102, 14987, 886, 14, 117, "Output"]
+}, Open  ]],
+Cell[636003, 15004, 610, 15, 60, "Input"],
+Cell[CellGroupData[{
+Cell[636638, 15023, 185, 4, 40, "Input"],
+Cell[636826, 15029, 231, 6, 86, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[598563, 14207, 409, 10, 60, "Input"],
-Cell[598975, 14219, 490, 10, 43, "Message"],
-Cell[599468, 14231, 516, 11, 24, "Message"],
-Cell[599987, 14244, 272, 5, 40, "Output"]
+Cell[637094, 15040, 148, 2, 40, "Input"],
+Cell[637245, 15044, 94, 1, 40, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[600296, 14254, 2098, 46, 212, "Input"],
-Cell[602397, 14302, 8076, 189, 385, "Output"]
-}, Open  ]]
-}, Closed]],
-Cell[CellGroupData[{
-Cell[610522, 14497, 209, 3, 48, "Section"],
-Cell[610734, 14502, 1584, 33, 117, "Input"],
-Cell[612321, 14537, 333, 7, 40, "Input"],
-Cell[612657, 14546, 325, 8, 40, "Input"],
-Cell[612985, 14556, 643, 17, 98, "Input"],
-Cell[CellGroupData[{
-Cell[613653, 14577, 195, 4, 40, "Input"],
-Cell[613851, 14583, 837, 13, 98, "Output"]
-}, Open  ]],
-Cell[614703, 14599, 784, 23, 79, "Input"],
-Cell[615490, 14624, 1389, 31, 212, "Input"],
-Cell[616882, 14657, 273, 7, 40, "Input"],
-Cell[CellGroupData[{
-Cell[617180, 14668, 242, 6, 40, "Input"],
-Cell[617425, 14676, 886, 14, 117, "Output"]
-}, Open  ]],
-Cell[618326, 14693, 610, 15, 60, "Input"],
-Cell[CellGroupData[{
-Cell[618961, 14712, 185, 4, 40, "Input"],
-Cell[619149, 14718, 231, 6, 86, "Output"]
+Cell[637376, 15050, 196, 4, 40, "Input"],
+Cell[637575, 15056, 170, 2, 40, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[619417, 14729, 148, 2, 40, "Input"],
-Cell[619568, 14733, 94, 1, 40, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[619699, 14739, 196, 4, 40, "Input"],
-Cell[619898, 14745, 170, 2, 40, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[620105, 14752, 1288, 31, 117, "Input"],
-Cell[621396, 14785, 2109891, 34278, 294, 2042511, 33172, "CachedBoxData", \
+Cell[637782, 15063, 1288, 31, 117, "Input"],
+Cell[639073, 15096, 2109891, 34278, 294, 2042511, 33172, "CachedBoxData", \
 "BoxData", "Output"]
 }, Open  ]],
-Cell[2731302, 49066, 1227, 30, 193, "Input"],
-Cell[2732532, 49098, 1435, 32, 193, "Input"],
-Cell[2733970, 49132, 678, 22, 60, "Input"],
-Cell[2734651, 49156, 941, 26, 98, "Input"],
+Cell[2748979, 49377, 1227, 30, 193, "Input"],
+Cell[2750209, 49409, 1435, 32, 193, "Input"],
+Cell[2751647, 49443, 678, 22, 60, "Input"],
+Cell[2752328, 49467, 941, 26, 98, "Input"],
 Cell[CellGroupData[{
-Cell[2735617, 49186, 142, 2, 40, "Input"],
-Cell[2735762, 49190, 7213, 205, 516, "Output"]
+Cell[2753294, 49497, 142, 2, 40, "Input"],
+Cell[2753439, 49501, 7213, 205, 516, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2743012, 49400, 151, 3, 40, "Input"],
-Cell[2743166, 49405, 73, 1, 40, "Output"]
+Cell[2760689, 49711, 151, 3, 40, "Input"],
+Cell[2760843, 49716, 73, 1, 40, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2743276, 49411, 1908, 44, 174, "Input"],
-Cell[2745187, 49457, 318, 4, 40, "Output"]
+Cell[2760953, 49722, 1908, 44, 174, "Input"],
+Cell[2762864, 49768, 318, 4, 40, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2745542, 49466, 425, 12, 60, "Input"],
-Cell[2745970, 49480, 6541, 178, 202, "Output"]
+Cell[2763219, 49777, 425, 12, 60, "Input"],
+Cell[2763647, 49791, 6541, 178, 202, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2752548, 49663, 331, 8, 40, "Input"],
-Cell[2752882, 49673, 6021, 149, 278, "Output"]
+Cell[2770225, 49974, 331, 8, 40, "Input"],
+Cell[2770559, 49984, 6021, 149, 278, "Output"]
 }, Open  ]],
-Cell[2758918, 49825, 666, 19, 60, "Input"],
+Cell[2776595, 50136, 666, 19, 60, "Input"],
 Cell[CellGroupData[{
-Cell[2759609, 49848, 185, 4, 40, "Input"],
-Cell[2759797, 49854, 515, 10, 43, "Message"]
+Cell[2777286, 50159, 185, 4, 40, "Input"],
+Cell[2777474, 50165, 515, 10, 43, "Message"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[2760361, 49870, 96, 1, 48, "Section"],
-Cell[2760460, 49873, 106, 1, 30, "Text"],
+Cell[2778038, 50181, 96, 1, 48, "Section"],
+Cell[2778137, 50184, 106, 1, 30, "Text"],
 Cell[CellGroupData[{
-Cell[2760591, 49878, 470, 13, 40, "Input"],
-Cell[2761064, 49893, 213, 3, 40, "Output"]
+Cell[2778268, 50189, 470, 13, 40, "Input"],
+Cell[2778741, 50204, 213, 3, 40, "Output"]
 }, Open  ]],
-Cell[2761292, 49899, 105, 1, 30, "Text"],
+Cell[2778969, 50210, 105, 1, 30, "Text"],
 Cell[CellGroupData[{
-Cell[2761422, 49904, 306, 9, 40, "Input"],
-Cell[2761731, 49915, 114, 1, 40, "Output"]
+Cell[2779099, 50215, 306, 9, 40, "Input"],
+Cell[2779408, 50226, 114, 1, 40, "Output"]
 }, Open  ]],
-Cell[2761860, 49919, 106, 1, 30, "Text"],
+Cell[2779537, 50230, 106, 1, 30, "Text"],
 Cell[CellGroupData[{
-Cell[2761991, 49924, 390, 11, 40, "Input"],
-Cell[2762384, 49937, 140, 2, 40, "Output"]
+Cell[2779668, 50235, 390, 11, 40, "Input"],
+Cell[2780061, 50248, 140, 2, 40, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2762561, 49944, 341, 10, 40, "Input"],
-Cell[2762905, 49956, 90, 1, 40, "Output"]
+Cell[2780238, 50255, 341, 10, 40, "Input"],
+Cell[2780582, 50267, 90, 1, 40, "Output"]
 }, Open  ]]
 }, Closed]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2763056, 49964, 97, 1, 26, "Subtitle"],
+Cell[2780733, 50275, 97, 1, 26, "Subtitle"],
 Cell[CellGroupData[{
-Cell[2763178, 49969, 154, 2, 78, "Section"],
+Cell[2780855, 50280, 154, 2, 78, "Section"],
 Cell[CellGroupData[{
-Cell[2763357, 49975, 281, 7, 40, "Input"],
-Cell[2763641, 49984, 163, 2, 40, "Output"]
+Cell[2781034, 50286, 281, 7, 40, "Input"],
+Cell[2781318, 50295, 163, 2, 40, "Output"]
 }, Open  ]],
-Cell[2763819, 49989, 1170, 30, 174, "Input"],
+Cell[2781496, 50300, 1170, 30, 174, "Input"],
 Cell[CellGroupData[{
-Cell[2765014, 50023, 135, 2, 40, "Input"],
-Cell[2765152, 50027, 166, 4, 40, "Output"]
+Cell[2782691, 50334, 135, 2, 40, "Input"],
+Cell[2782829, 50338, 166, 4, 40, "Output"]
 }, Open  ]]
 }, Closed]],
-Cell[2765345, 50035, 147, 2, 48, "Section"],
+Cell[2783022, 50346, 147, 2, 48, "Section"],
 Cell[CellGroupData[{
-Cell[2765517, 50041, 185, 2, 48, "Section"],
+Cell[2783194, 50352, 185, 2, 48, "Section"],
 Cell[CellGroupData[{
-Cell[2765727, 50047, 335, 8, 40, "Input"],
-Cell[2766065, 50057, 205, 3, 40, "Output"]
+Cell[2783404, 50358, 335, 8, 40, "Input"],
+Cell[2783742, 50368, 205, 3, 40, "Output"]
 }, Open  ]],
-Cell[2766285, 50063, 1222, 31, 174, "Input"],
+Cell[2783962, 50374, 1222, 31, 174, "Input"],
 Cell[CellGroupData[{
-Cell[2767532, 50098, 163, 3, 40, "Input"],
-Cell[2767698, 50103, 323, 8, 40, "Output"]
+Cell[2785209, 50409, 163, 3, 40, "Input"],
+Cell[2785375, 50414, 323, 8, 40, "Output"]
 }, Open  ]]
 }, Closed]]
 }, Open  ]]
